@@ -19,9 +19,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build --output-path ng-billing-admin  --aot --prod",
+    "postinstall": "ng build --aot --prod",
     "start": "node server.js",
-    "build": "ng build --prod --aot --buildOptimizer --commonChunk --vendorChunk --optimization --progress",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -29,9 +29,9 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.1.1",
-    "@angular/common": "^9.1.1",
-    "@angular/compiler": "^9.1.1",
-    "@angular/core": "^9.1.1",
+    "@angular/common": "^9.1.12",
+    "@angular/compiler": "^9.1.12",
+    "@angular/core": "^9.1.12",
     "@angular/forms": "^9.1.1",
     "@angular/platform-browser": "^9.1.1",
     "@angular/platform-browser-dynamic": "^9.1.1",
