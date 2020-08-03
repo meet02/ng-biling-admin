@@ -17,11 +17,11 @@
   "homepage": "https://coreui.io/angular",
   "copyright": "Copyright 2020 creativeLabs Łukasz Holeczek",
   "license": "MIT",
-  "scripts": {
+   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build --output-path ng-billing-admin  --aot --prod",
+    "postinstall": "ng build --aot --prod",
     "start": "node server.js",
-    "build": "ng build --prod --aot --buildOptimizer --commonChunk --vendorChunk --optimization --progress",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
