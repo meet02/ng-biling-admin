@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-conole.log("listing")
+console.log("listing")
 // app.use(express.static("dist"));
 // Serve only the static files form the dist directory
 
@@ -23,4 +23,4 @@ app.get("/*", function (req, res) {
 
 app.listen(process.env.PORT || 8080);
 
-conole.log("listing")
+console.log("listing")
