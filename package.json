@@ -19,16 +19,17 @@
   "license": "MIT",
      "scripts": {
     "ng": "ng",
-    "heroku-postbuild": "ng build --prod",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
+    "postinstall": "ng build --aot --target=production",
     "start": "node server.js",
-    "build": "ng build --prod --aot --buildOptimizer --commonChunk --vendorChunk --optimization --progress",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
+     "@angular/cli": "^10.0.5",
+    "@angular/compiler-cli": "^10.0.7",
     "@angular/animations": "^10.0.7",
     "@angular/common": "^10.0.7",
     "@angular/compiler": "^10.0.7",
@@ -63,8 +64,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
-    "@angular/cli": "^10.0.5",
-    "@angular/compiler-cli": "^10.0.7",
     "@angular/language-service": "^10.0.7",
     "@types/jasmine": "^3.5.10",
     "@types/jasminewd2": "^2.0.8",
