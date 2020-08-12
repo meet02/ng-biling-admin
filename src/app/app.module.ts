@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+// Animation module
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
@@ -24,6 +25,22 @@ import { RegisterComponent } from "./views/register/register.component";
 import { FormsModule } from "@angular/forms";
 
 const APP_CONTAINERS = [DefaultLayoutComponent];
+
+// Toaster
+import { ToastrModule } from "ngx-toastr";
+
+// Spinner
+
+import { NgxSpinnerModule } from "ngx-spinner";
+
+// service
+
+import { ToastService } from "./service/toast.service";
+import { SpinnerService } from "./service/spinner.service";
+
+// Custom Model
+
+import { UserModule } from "./views/users/user.module";
 
 import {
   AppAsideModule,
@@ -56,6 +73,9 @@ import { ChartsModule } from "ng2-charts";
     TabsModule.forRoot(),
     ChartsModule,
     FormsModule,
+    ToastrModule.forRoot(),
+    NgxSpinnerModule,
+    UserModule,
   ],
   declarations: [
     AppComponent,
@@ -70,6 +90,8 @@ import { ChartsModule } from "ng2-charts";
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
     },
+    ToastService,
+    SpinnerService,
   ],
   bootstrap: [AppComponent],
 })

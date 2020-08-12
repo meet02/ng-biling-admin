@@ -8,6 +8,7 @@ import { P404Component } from "./views/error/404.component";
 import { P500Component } from "./views/error/500.component";
 import { LoginComponent } from "./views/login/login.component";
 import { RegisterComponent } from "./views/register/register.component";
+import { UsersComponent } from "./views/users/users.component";
 
 export const routes: Routes = [
   {
@@ -36,13 +37,13 @@ export const routes: Routes = [
       title: "Login Page",
     },
   },
-  {
-    path: "register",
-    component: RegisterComponent,
-    data: {
-      title: "Register Page",
-    },
-  },
+  // {
+  //   path: "register",
+  //   component: RegisterComponent,
+  //   data: {
+  //     title: "Register Page",
+  //   },
+  // },
   {
     path: "",
     component: DefaultLayoutComponent,
@@ -71,6 +72,11 @@ export const routes: Routes = [
           import("./views/dashboard/dashboard.module").then(
             (m) => m.DashboardModule
           ),
+      },
+      {
+        path: "user",
+        loadChildren: () =>
+          import("./views/users/user.module").then((m) => m.UserModule),
       },
       {
         path: "icons",
